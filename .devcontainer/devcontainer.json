@@ -22,7 +22,8 @@
 		"oderwat.indent-rainbow",
 		"usernamehw.errorlens",
 		"esbenp.prettier-vscode",
-		"octref.vetur"
+		"octref.vetur",
+		"cssho.vscode-svgviewer"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
