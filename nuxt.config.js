@@ -68,5 +68,8 @@ export default {
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-proposal-private-methods',]
     }
+  },
+  server: {
+      host: "0.0.0.0"
   }
 }
