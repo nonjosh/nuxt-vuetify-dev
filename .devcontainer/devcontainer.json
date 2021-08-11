@@ -23,7 +23,8 @@
 		"usernamehw.errorlens",
 		"esbenp.prettier-vscode",
 		"octref.vetur",
-		"cssho.vscode-svgviewer"
+		"cssho.vscode-svgviewer",
+		"naumovs.color-highlight"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
