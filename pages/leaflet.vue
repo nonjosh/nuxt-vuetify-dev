@@ -1,5 +1,5 @@
 <template>
-  <div id="map-wrap" style="height: 100vh">
+  <div id="map-wrap" style="height: 80vh">
     
     <v-dialog v-model="dialog" max-width="290">
       <v-card>
@@ -23,7 +23,7 @@
 export default {
     data() {
       return {
-        zoom:16,
+        zoom:12,
         dialog: false
       }
     }
