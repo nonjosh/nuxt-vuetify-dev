@@ -105,7 +105,17 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'Inspire',
           to: '/inspire'
-        }
+        },
+        {
+          icon: 'mdi-wechat',
+          title: 'Dialog examples',
+          to: '/dialog'
+        },
+        {
+          icon: 'mdi-map',
+          title: 'leaflet',
+          to: '/leaflet'
+        },
       ],
       miniVariant: false,
       right: true,
