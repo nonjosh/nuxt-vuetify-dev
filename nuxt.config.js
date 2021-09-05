@@ -24,8 +24,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [{ src: '~plugins/leaflet.js', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -40,7 +39,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'nuxt-leaflet'
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -73,13 +71,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    babel:{
-      plugins:[
+    babel: {
+      plugins: [
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-proposal-private-methods',]
     }
   },
   server: {
-      host: "0.0.0.0"
+    host: "0.0.0.0"
   }
 }

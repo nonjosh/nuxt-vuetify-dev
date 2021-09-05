@@ -116,6 +116,11 @@ export default {
           title: 'leaflet',
           to: '/leaflet'
         },
+        {
+          icon: 'mdi-map',
+          title: 'leaflet2',
+          to: '/leaflet2'
+        },
       ],
       miniVariant: false,
       right: true,
