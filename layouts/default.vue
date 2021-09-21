@@ -121,6 +121,11 @@ export default {
           title: 'leaflet2',
           to: '/leaflet2'
         },
+        {
+          icon: 'mdi-link',
+          title: 'two way binding',
+          to: '/binding'
+        },
       ],
       miniVariant: false,
       right: true,
