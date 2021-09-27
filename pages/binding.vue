@@ -40,6 +40,12 @@
       <v-row>
         <v-col cols="12" lg="3">myDate: {{ myDate }}</v-col>
         <v-col cols="12" lg="4"> <my-date-picker v-model="myDate" /></v-col>
+        <v-col cols="12" lg="2">
+          <my-date-picker-menu v-model="myDate"
+        /></v-col>
+        <v-col cols="12" lg="2">
+          <my-date-picker-dialog v-model="myDate"
+        /></v-col>
       </v-row>
       <v-row>
         <v-col cols="12" lg="3">foo: {{ foo }}</v-col>
