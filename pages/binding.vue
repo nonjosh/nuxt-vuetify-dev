@@ -10,18 +10,10 @@
           ></v-checkbox
         ></v-col>
         <v-col cols="12" lg="2"
-          ><base-checkbox v-model="checkboxValue"></base-checkbox>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12" lg="3">
-          <v-checkbox
-            v-model="checkboxValue"
-            :label="`checkboxValue: ${checkboxValue.toString()}`"
-          ></v-checkbox
-        ></v-col>
-        <v-col cols="12" lg="2"
           ><vuetify-checkbox v-model="checkboxValue"></vuetify-checkbox>
+        </v-col>
+        <v-col cols="12" lg="2"
+          ><base-checkbox v-model="checkboxValue"></base-checkbox>
         </v-col>
       </v-row>
       <v-row>
