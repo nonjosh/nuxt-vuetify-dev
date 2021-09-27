@@ -38,6 +38,10 @@
         /></v-col>
       </v-row>
       <v-row>
+        <v-col cols="12" lg="3">myDate: {{ myDate }}</v-col>
+        <v-col cols="12" lg="4"> <my-date-picker v-model="myDate" /></v-col>
+      </v-row>
+      <v-row>
         <v-col cols="12" lg="3">foo: {{ foo }}</v-col>
         <v-col cols="12" lg="2"> <my-input v-model="foo"></my-input></v-col>
         <v-col cols="12" lg="2">
@@ -58,6 +62,7 @@ export default {
         warn: false,
       },
       foo: 'bar',
+      myDate: '2021-09-11',
     }
   },
 }
