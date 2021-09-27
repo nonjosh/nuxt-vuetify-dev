@@ -37,6 +37,13 @@
           ><field ref="title" v-model="title.value" :warn="title.warn"
         /></v-col>
       </v-row>
+      <v-row>
+        <v-col cols="12" lg="3">foo: {{ foo }}</v-col>
+        <v-col cols="12" lg="2"> <my-input v-model="foo"></my-input></v-col>
+        <v-col cols="12" lg="2">
+          <my-input :value="foo" @input="foo = $event"></my-input
+        ></v-col>
+      </v-row>
     </v-container>
   </v-card>
 </template>
@@ -50,6 +57,7 @@ export default {
         value: '',
         warn: false,
       },
+      foo: 'bar',
     }
   },
 }
