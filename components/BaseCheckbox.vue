@@ -1,9 +1,13 @@
 <template>
-  <input
-    type="checkbox"
-    :checked="checked"
-    @change="$emit('change', $event.target.checked)"
-  />
+  <div>
+    <input
+      type="checkbox"
+      :checked="checked"
+      id="mycheckbox"
+      @change="$emit('change', $event.target.checked)"
+    />
+    <label for="mycheckbox">checkbox in component</label>
+  </div>
 </template>
 
 <script>
