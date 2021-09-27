@@ -40,6 +40,16 @@
         /></v-col>
       </v-row>
       <v-row>
+        <v-col cols="12" lg="3">myTime: {{ myTime }}</v-col>
+        <v-col cols="12" lg="3"> <my-time-picker v-model="myTime" /></v-col>
+        <v-col cols="12" lg="2">
+          <my-time-picker-menu v-model="myTime"
+        /></v-col>
+        <v-col cols="12" lg="2">
+          <my-time-picker-dialog v-model="myTime"
+        /></v-col>
+      </v-row>
+      <v-row>
         <v-col cols="12" lg="3">foo: {{ foo }}</v-col>
         <v-col cols="12" lg="2"> <my-input v-model="foo"></my-input></v-col>
         <v-col cols="12" lg="2">
@@ -61,6 +71,7 @@ export default {
       },
       foo: 'bar',
       myDate: '2021-09-11',
+      myTime: '17:22',
     }
   },
 }
