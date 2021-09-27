@@ -3,9 +3,14 @@
     <v-card-title> Component two way binding examples</v-card-title>
     <v-container>
       <v-row>
-        <v-col cols="12" lg="3">lovingVue: {{ lovingVue }}</v-col>
+        <v-col cols="12" lg="3">
+          <v-checkbox
+            v-model="checkboxValue"
+            :label="`checkboxValue: ${checkboxValue.toString()}`"
+          ></v-checkbox
+        ></v-col>
         <v-col cols="12" lg="2"
-          ><base-checkbox v-model="lovingVue"></base-checkbox>
+          ><base-checkbox v-model="checkboxValue"></base-checkbox>
         </v-col>
       </v-row>
       <v-row>
@@ -29,7 +34,7 @@
 export default {
   data() {
     return {
-      lovingVue: false,
+      checkboxValue: false,
       title: {
         value: '',
         warn: false,
