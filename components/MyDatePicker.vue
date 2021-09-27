@@ -17,7 +17,6 @@ export default {
         return this.myDate
       },
       set(val) {
-        console.log(val)
         this.$emit('change', val)
       },
     },
