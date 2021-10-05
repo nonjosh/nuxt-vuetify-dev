@@ -6,7 +6,7 @@
     :return-value.sync="inputVal"
     width="290px"
   >
-    <template v-slot:activator="{ on, attrs }">
+    <template #activator="{ on, attrs }">
       <v-text-field
         v-model="inputVal"
         label="Select Date (HKT)"
