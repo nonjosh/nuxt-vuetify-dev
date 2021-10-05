@@ -16,7 +16,12 @@
         v-on="on"
       ></v-text-field>
     </template>
-    <v-date-picker v-model="inputVal" scrollable show-adjacent-months>
+    <v-date-picker
+      v-model="inputVal"
+      scrollable
+      show-adjacent-months
+      :allowed-dates="(date) => date <= new Date().toISOString().substr(0, 10)"
+    >
       <v-spacer></v-spacer>
       <v-btn text color="primary" @click="modal = false"> Cancel </v-btn>
       <v-btn text color="primary" @click="$refs.dialog.save(inputVal)">
