@@ -1,5 +1,9 @@
 <template>
-  <v-date-picker v-model="inputVal" show-adjacent-months></v-date-picker>
+  <v-date-picker
+    v-model="inputVal"
+    show-adjacent-months
+    :allowed-dates="(date) => date <= new Date().toISOString().substr(0, 10)"
+  ></v-date-picker>
 </template>
 
 <script>
