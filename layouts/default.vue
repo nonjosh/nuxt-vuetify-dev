@@ -122,6 +122,11 @@ export default {
           to: '/leaflet2'
         },
         {
+          icon: 'mdi-scatter-plot',
+          title: 'chartjs',
+          to: '/chart'
+        },
+        {
           icon: 'mdi-link',
           title: 'two way binding',
           to: '/binding'
