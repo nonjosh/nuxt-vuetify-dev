@@ -16,7 +16,7 @@ RUN yarn generate
 
 #
 # ---- httpd ----
-FROM httpd:2.4.48
+FROM httpd:2.4-bullseye
 
 COPY --from=builder /app/dist /usr/local/apache2/htdocs
 
