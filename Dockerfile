@@ -1,31 +1,24 @@
-FROM node:17.6-slim as builder
+#
+# ---- builder ----
+FROM node:16-buster AS builder
 
+# set working directory
 WORKDIR /app
+# copy project file
+COPY package.json .
+COPY yarn.lock .
+# install node packages
+RUN yarn install
 
+# copy project file and build
 COPY . .
+RUN yarn generate
 
-RUN yarn install \
-    --prefer-offline \
-    --frozen-lockfile \
-    --non-interactive \
-    --production=false
+#
+# ---- httpd ----
+FROM httpd:2.4.46
 
-RUN yarn build
+COPY --from=builder /app/dist /usr/local/apache2/htdocs
 
-RUN rm -rf node_modules && \
-    NODE_ENV=production yarn install \
-    --prefer-offline \
-    --pure-lockfile \
-    --non-interactive \
-    --production=true
-
-FROM node:17.6-slim
-
-WORKDIR /app
-
-COPY --from=builder /app  .
-
-ENV HOST 0.0.0.0
-EXPOSE 80
-
-CMD [ "yarn", "start" ]
+COPY --from=builder /usr/bin/curl /usr/bin/curl
+HEALTHCHECK CMD curl --fail http://localhost:80/ || exit 1
